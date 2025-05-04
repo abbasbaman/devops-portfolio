@@ -1,7 +1,7 @@
 ## Example microservice architecture
 
 First of all, we need an example application. 
-In this demo, I have a few microservices that work together to form a video catalog.
+I have a few microservices that work together to form a video catalog.
 
 ## A simple Web UI: videos-web
 <hr/>
