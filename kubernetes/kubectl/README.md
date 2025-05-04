@@ -1,6 +1,6 @@
 # Introduction to KUBECTL
 
-To start off this tutorial, we will be using [kind](https://kind.sigs.k8s.io/) to create our test cluster. </br>
+To start off , we will be using [kind](https://kind.sigs.k8s.io/) to create our test cluster. </br>
 You can use `minikube` or any Kubernetes cluster. </br>
 
 Kind is an amazing tool for running test clusters locally as it runs in a container which makes it lightweight and easy to run throw-away clusters for testing purposes. </br>
