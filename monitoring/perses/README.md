@@ -35,7 +35,7 @@ kubectl get nodes
 
 
 
-📡 Step 2: Install kube-prometheus-stack
+## 📡 Step 2: Install kube-prometheus-stack
 
 Add the Helm repo and install:
 
@@ -51,7 +51,7 @@ Check pods:
 
 kubectl get pods -n kube-prometheus-stack
 
-📝 Step 3: Sample Go Application
+## 📝 Step 3: Sample Go Application
 
 The demo Go app exposes four Prometheus metrics:
 
@@ -79,7 +79,7 @@ Errors/success responses are labeled in metrics.
 
 Metrics are scraped by Prometheus Operator using a ServiceMonitor.
 
-🐳 Step 4: Build & Deploy Go App
+## 🐳 Step 4: Build & Deploy Go App
 Build Docker Image
 docker buildx build --platform linux/amd64 -t demo-app:latest .
 
@@ -98,7 +98,7 @@ Deployment + Service
 
 ServiceMonitor (so Prometheus can scrape metrics)
 
-📊 Step 5: Deploy Perses
+## 📊 Step 5: Deploy Perses
 
 Create a namespace and deploy Perses:
 
@@ -119,7 +119,7 @@ kubectl port-forward svc/perses 8080:8080 -n perses
 Visit http://localhost:8080
 .
 
-🛠️ Step 6: Dashboard-as-Code with Go SDK
+## 🛠️ Step 6: Dashboard-as-Code with Go SDK
 
 Perses supports Dashboard-as-Code (DaC).
 
@@ -143,7 +143,7 @@ percli apply -f dashboard.json
 
 Now refresh Perses UI → your dashboard should appear 🎉
 
-🔥 Step 7: Generate Load
+## 🔥 Step 7: Generate Load
 
 Port-forward the app:
 
@@ -157,7 +157,7 @@ Run load script:
 
 This sends repeated requests to /work, generating traffic and errors that appear in the dashboard.
 
-✅ Observing Metrics
+## ✅ Observing Metrics
 
 Check Prometheus:
 
@@ -170,7 +170,7 @@ Visit http://localhost:9090
 Check Perses Dashboards:
 http://localhost:8080
 
-📖 Why Perses?
+## 📖 Why Perses?
 
 Open specification for dashboards
 
