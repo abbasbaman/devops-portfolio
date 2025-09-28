@@ -55,7 +55,7 @@ kubectl get pods -n kube-prometheus-stack
 ```
 
 ## 📝 Step 3: Sample Go Application
-
+```bash
 The demo Go app exposes four Prometheus metrics:
 
 http_requests_total → Counter for total requests by path, method, status.
@@ -81,7 +81,7 @@ Each request increments counters, records latency in histograms, and updates gau
 Errors/success responses are labeled in metrics.
 
 Metrics are scraped by Prometheus Operator using a ServiceMonitor.
-
+```
 ## 🐳 Step 4: Build & Deploy Go App
 Build Docker Image
 docker buildx build --platform linux/amd64 -t demo-app:latest .
