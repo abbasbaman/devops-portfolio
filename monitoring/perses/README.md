@@ -86,9 +86,9 @@ Metrics are scraped by Prometheus Operator using a ServiceMonitor.
 ```bash
 Build Docker Image
 docker build -t abbasbatman/perses-demo .
-
+```
 ![Docker Build](./images/Prom-install.png)
-
+```bash
 Load Image into Kind
 kind load docker-image demo-app:latest --name perses-demo
 
