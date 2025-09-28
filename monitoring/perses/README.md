@@ -48,7 +48,7 @@ helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -n
 
 ![Prom install](./images/Prom-install.png)
 
-Check pods:
+**Check pods:**
 
 kubectl get pods -n kube-prometheus-stack
 
