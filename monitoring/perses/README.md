@@ -28,8 +28,9 @@ kubectl cluster-info --context kind-perses-demo
 
 ---
 
+
+**Verify nodes:**
 ```bash
-Verify nodes:
 kubectl get nodes
 ```
 
@@ -49,8 +50,9 @@ helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -n
 ![Prom install](./images/Prom-install.png)
 
 **Check pods:**
-
+```bash
 kubectl get pods -n kube-prometheus-stack
+```
 
 ## 📝 Step 3: Sample Go Application
 
