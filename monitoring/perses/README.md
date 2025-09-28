@@ -83,8 +83,11 @@ Errors/success responses are labeled in metrics.
 Metrics are scraped by Prometheus Operator using a ServiceMonitor.
 ```
 ## 🐳 Step 4: Build & Deploy Go App
+```bash
 Build Docker Image
-docker buildx build --platform linux/amd64 -t demo-app:latest .
+docker build -t abbasbatman/perses-demo .
+
+![Docker Build](./images/Prom-install.png)
 
 Load Image into Kind
 kind load docker-image demo-app:latest --name perses-demo
@@ -100,7 +103,7 @@ Namespace
 Deployment + Service
 
 ServiceMonitor (so Prometheus can scrape metrics)
-
+```
 ## 📊 Step 5: Deploy Perses
 
 Create a namespace and deploy Perses:
@@ -109,15 +112,16 @@ kubectl create ns perses
 kubectl apply -f perses-deploy.yaml
 
 
-Check Perses:
 
+**Check Perses:**
+```bash
 kubectl get pods -n perses
-
+```
 
 Port-forward to access the UI:
-
+```bash
 kubectl port-forward svc/perses 8080:8080 -n perses
-
+```
 
 Visit http://localhost:8080
 .
