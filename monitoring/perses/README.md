@@ -22,6 +22,9 @@ We’ll use a simple Go application that exposes Prometheus metrics, deploy it o
 kind create cluster --image kindest/node:v1.33.1 --name perses-demo
 kubectl cluster-info --context kind-perses-demo
 
+![Kind-Install](./images/Kind-Install.png)
+
+
 Verify nodes:
 
 kubectl get nodes
