@@ -38,15 +38,15 @@ kubectl get nodes
 
 ## 📡 Step 2: Install kube-prometheus-stack
 
-Add the Helm repo and install:
-
+**Add the Helm repo and install:**
+```bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 
 kubectl create ns kube-prometheus-stack
 
 helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -n kube-prometheus-stack
-
+```
 ![Prom install](./images/Prom-install.png)
 
 **Check pods:**
