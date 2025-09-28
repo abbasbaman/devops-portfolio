@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: saiyam911/perses-demo:latest
+          image: abbasbatman/perses-demo:latest
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

@@ -21,7 +21,7 @@ spec:
           image: persesdev/perses:v0.51.1
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8081
           volumeMounts:
             - name: data
               mountPath: /var/lib/perses
@@ -62,5 +62,5 @@ spec:
   selector: { app: perses }
   ports:
     - name: http
-      port: 8080
+      port: 8081
       targetPort: http

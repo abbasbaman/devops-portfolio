@@ -22,7 +22,7 @@ func main() {
 	b, err := dashboard.New(
 		// IMPORTANT: metadata.name must be DNS-safe (no spaces)
 		"demo-app-prometheus",
-		dashboard.ProjectName("demo"),
+		dashboard.ProjectName("Demo"),
 
 		// Local Prometheus datasource (ref matches what queries use)
 		dashboard.AddDatasource("prom-incluster",
