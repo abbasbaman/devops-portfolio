@@ -21,14 +21,14 @@ We’ll use a simple Go application that exposes Prometheus metrics, deploy it o
 ```bash
 kind create cluster --image kindest/node:v1.33.1 --name perses-demo
 kubectl cluster-info --context kind-perses-demo
-
+```
 
 ![Kind Install](./images/Kind-Install.png)
 
+
 ---
-
 Verify nodes:
-
+```bash
 kubectl get nodes
 
 📡 Step 2: Install kube-prometheus-stack
@@ -177,8 +177,8 @@ Dashboard-as-Code → treat dashboards like application code
 GitOps-friendly → CRDs for dashboards, datasources, projects
 
 Developer-first workflow (Go SDK, QLang, JSON/YAML)
-
-🏁 Closing Notes
+---
+## 🏁 Closing Notes
 
 This demo showed:
 
