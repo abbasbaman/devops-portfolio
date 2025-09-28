@@ -46,6 +46,7 @@ kubectl create ns kube-prometheus-stack
 
 helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -n kube-prometheus-stack
 
+![Prom install](./images/Prom-install.png)
 
 Check pods:
 
