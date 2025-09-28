@@ -27,9 +27,13 @@ kubectl cluster-info --context kind-perses-demo
 
 
 ---
-Verify nodes:
+
 ```bash
+Verify nodes:
 kubectl get nodes
+```
+
+
 
 📡 Step 2: Install kube-prometheus-stack
 
