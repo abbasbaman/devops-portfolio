@@ -111,7 +111,7 @@ ServiceMonitor (so Prometheus can scrape metrics)
 **Create a namespace and deploy Perses:**
 ```bash
 kubectl create ns perses
-kubectl apply -f perses-deploy.yaml
+kubectl apply -f k8s-perses.yaml
 ```
 
 
