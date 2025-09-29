@@ -106,11 +106,11 @@ ServiceMonitor (so Prometheus can scrape metrics)
 ```
 ## 📊 Step 5: Deploy Perses
 
-Create a namespace and deploy Perses:
-
+**Create a namespace and deploy Perses:**
+```bash
 kubectl create ns perses
 kubectl apply -f perses-deploy.yaml
-
+```
 
 
 **Check Perses:**
@@ -140,43 +140,54 @@ Define panels (PromQL queries for traffic, latency, errors).
 
 Attach to Prometheus datasource (kube-prometheus-stack).
 
-Build Dashboard JSON
-percli login --url http://localhost:8080
+**Build Dashboard JSON**
+```bash
+percli login --url http://localhost:8081
+```
+
+![percli login](./images/percli-login.png)
+
+```bash
 percli dac build dashboard.go -o dashboard.json
+```
+**Apply Dashboard**
 
-Apply Dashboard
+```bash
 percli apply -f dashboard.json
+```
 
+![percli apply](./images/percli-apply.png)
 
 Now refresh Perses UI → your dashboard should appear 🎉
 
 ## 🔥 Step 7: Generate Load
 
-Port-forward the app:
-
+***Port-forward the app:***
+```bash
 kubectl port-forward svc/demo-app 8081:8080 -n demo
+```
 
-
-Run load script:
-
+***Run load script:**
+```bash
 ./load.sh
-
+```
 
 This sends repeated requests to /work, generating traffic and errors that appear in the dashboard.
 
 ## ✅ Observing Metrics
 
-Check Prometheus:
-
+***Check Prometheus:**
+```bash
 kubectl port-forward svc/kube-prometheus-stack-prometheus 9090:9090 -n kube-prometheus-stack
-
-
+```
+```bash
 Visit http://localhost:9090
-.
+```
 
-Check Perses Dashboards:
+***Check Perses Dashboards:***
+```bash
 http://localhost:8080
-
+```
 ## 📖 Why Perses?
 
 Open specification for dashboards
