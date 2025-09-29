@@ -88,22 +88,23 @@ Build Docker Image
 docker build -t abbasbatman/perses-demo .
 ```
 ![Docker Build](./images/Prom-install.png)
+
+***Load Image into Kind**
 ```bash
-Load Image into Kind
 kind load docker-image demo-app:latest --name perses-demo
 
 Deploy App + ServiceMonitor
 kubectl apply -f deploy.yaml
+```
 
-
-This creates:
+***This creates:***
 
 Namespace
 
 Deployment + Service
 
 ServiceMonitor (so Prometheus can scrape metrics)
-```
+
 ## 📊 Step 5: Deploy Perses
 
 **Create a namespace and deploy Perses:**
