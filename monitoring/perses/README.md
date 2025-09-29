@@ -188,8 +188,11 @@ Visit http://localhost:9090
 
 ***Check Perses Dashboards:***
 ```bash
-http://localhost:8080
+http://localhost:8081
+
 ```
+![dashboard](./images/dashboard.png)
+
 ## 📖 Why Perses?
 
 Open specification for dashboards
