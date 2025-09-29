@@ -90,7 +90,7 @@ docker build -t abbasbatman/perses-demo .
 ```
 ![Docker Build](./images/Prom-install.png)
 
-***Load Image into Kind**
+***Load Image into Kind***
 ```bash
 kind load docker-image demo-app:latest --name perses-demo
 
