@@ -169,7 +169,7 @@ Now refresh Perses UI → your dashboard should appear 🎉
 kubectl port-forward svc/demo-app 8081:8080 -n demo
 ```
 
-***Run load script:**
+***Run load script:***
 ```bash
 ./load.sh
 ```
@@ -178,7 +178,7 @@ This sends repeated requests to /work, generating traffic and errors that appear
 
 ## ✅ Observing Metrics
 
-***Check Prometheus:**
+***Check Prometheus:***
 ```bash
 kubectl port-forward svc/kube-prometheus-stack-prometheus 9090:9090 -n kube-prometheus-stack
 ```
