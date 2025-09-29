@@ -121,7 +121,7 @@ kubectl get pods -n perses
 
 Port-forward to access the UI:
 ```bash
-kubectl port-forward svc/perses 8080:8080 -n perses
+kubectl port-forward svc/perses 8081:8081 -n perses
 ```
 
 Visit http://localhost:8080
