@@ -83,8 +83,9 @@ Errors/success responses are labeled in metrics.
 Metrics are scraped by Prometheus Operator using a ServiceMonitor.
 ```
 ## 🐳 Step 4: Build & Deploy Go App
+
+***Build Docker Image***
 ```bash
-Build Docker Image
 docker build -t abbasbatman/perses-demo .
 ```
 ![Docker Build](./images/Prom-install.png)
@@ -124,7 +125,7 @@ Port-forward to access the UI:
 kubectl port-forward svc/perses 8081:8081 -n perses
 ```
 
-Visit http://localhost:8080
+Visit http://localhost:8081
 .
 
 ## 🛠️ Step 6: Dashboard-as-Code with Go SDK
